@@ -1,0 +1,260 @@
+/* 0.1 */
+
+.leaflet-popup-content-wrapper {
+	box-shadow: none;
+	-webkit-border-radius: 0px;
+	border-radius: 5px;
+	padding: 0px;
+}
+
+.leaflet-popup-content {
+	margin: 0px;
+	box-shadow: 0 3px 14px rgba(0,0,0,0.3);
+}
+
+.popHead {
+	color: #ffffff;
+	background-color: #428bca;
+	padding: 20px 10px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	text-align: center;
+}
+
+div.metadata {
+	padding: 20px 10px 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: #555;
+	font-size: 11px;
+}
+
+div.leaflet-popup-content .btn-xs {
+	color: #555;
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+
+.collapsing {
+}
+
+
+/****** NEW NAVBAR ******/
+
+
+
+
+div.reveal {
+	padding: 10px;
+	margin-bottom: -1px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 3px 0 rgba(0,0,0,0.5);
+	background: #FAF7F5;
+}
+
+div.flag {
+	z-index: 2;
+}
+
+div.flag.fixed {
+	position: fixed;
+}
+
+div.flag > .point-counter {
+	background: #000;
+	border: none;
+	border-top: 1px solid #222;
+	color: #eee;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+/**** The above is strictly for mapping ***/
+.col-md-3, .col-md-12 {
+	padding: 0px;
+}
+
+.row {
+	margin: 0px;
+}
+
+
+
+h2.home {
+	padding-left: 15px;
+}
+
+
+.details {
+	padding: 15px;
+}
+
+div.details {
+	background-color: #fff;
+	font-size: 12px;
+}
+
+.info {
+	float: right;
+}
+
+.details:last-child {
+}
+
+.main-content .col-md-3.revealed {
+	padding: 0 15px;
+}
+
+
+
+
+
+img.sidebar {
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+	border: 1px solid #fefefe;
+}
+
+
+
+html, body {
+    height: 100%;
+}
+body {
+	padding-top: 5px;
+}
+
+.col-md-12 {
+	min-width: 960px;
+	width: 100%;
+}
+
+#map-container {
+  width:100%;
+  margin:auto;
+  overflow: visible;
+  z-index: 1;
+  margin-top:150px;
+}
+#map {
+  height: 400px;
+  width:100%;
+  position: relative;
+}
+
+div.side-list {
+	position: relative;
+	z-index: 2;
+	padding: 0;
+}
+
+
+.list-group {
+	margin-bottom: 0px;
+	padding: 5px;
+	background: #eee;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.heading-content {
+	background: #ddd;
+	height: 5px;
+	border-bottom: 1px solid #999;
+	border-top: 1px solid #fff;
+}
+
+.point-counter {
+	background: #FAF7F5;
+	margin-bottom: 10px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: 0 0 3px 0 rgba(0,0,0,0.4);
+	text-align: center;
+	border: 1px solid #fff;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 5px;
+}
+
+.count-highlight {
+	color: #53AED7;
+	font-size: 18px;
+	text-shadow: 0px 1px 1px #fff;
+}
+
+
+
+
+
+
+.main-content .col-md-3 {
+
+}
+
+#map-container > i {
+	position: absolute;
+    display: block;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+}
+
+
+.map-top { top: -5px; left: 0; right: 0; height: 5px; }
+.map-left { left: -5px; top: 0; bottom: 0; width: 5px; }
+
+
+.list-group-item:first-child {
+	border-top: 0;
+	border-radius: inherit;
+}
+
+.list-group-container {
+	box-shadow: 0 0 3px 0 rgba(0,0,0,0.5);
+}
+
+
+p.address {
+	font-weight: normal;
+	font-size: 12px;
+	margin: 0 0 4px;
+}
+
+
+button.list-group-item {
+	border-left: 0px;
+	border-right: 0px;
+	color: #555;
+	width: 100%;
+	text-align: left;
+	font-size: 13px;
+	font-weight: bold;
+	background: #FAF7F5;
+}
+
+button.list-group-item:last-child {
+	border-bottom: 0;
+}
+
+button.list-group-item:hover, button.list-group-item.hover {
+	background-color: #fcf8e3;
+}
+
+button.list-group-item.active, button.list-group-item.active:hover {
+	background-color: #428bca;
+	color: #fff;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}

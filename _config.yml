@@ -1,0 +1,7 @@
+title: Rebuild PH
+created_by: Rebuild PH
+
+relative_permalinks: true
+permalink: pretty
+
+markdown: redcarpet
