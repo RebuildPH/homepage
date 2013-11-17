@@ -153,7 +153,16 @@ body {
   width:100%;
   position: relative;
 }
-
+#map-container.detail{
+  width:900px;
+  height:300px;
+  margin:auto;
+}
+#map.detail{ 
+  width:300px;
+  height:300px;
+  float:left;
+}
 
 div.project-details{ 
   width:0px;
@@ -175,6 +184,18 @@ div.project-list-item img{
   width:100%;
   
   margin:10px auto 20px;
+}
+div.project-detail{ 
+  width:900px;
+  margin:10px auto;
+}
+div.project-detail-image{ 
+  width:580px;
+  background-size:580px;
+  margin-left:5px;
+  background-position:center center;
+  height:300px;
+  float:left;
 }
 
 div.project-list{ 
@@ -285,4 +306,7 @@ button.list-group-item.active, button.list-group-item.active:hover {
 	-moz-transition: all 0.1s ease-in-out;
 	-o-transition: all 0.1s ease-in-out;
 	transition: all 0.1s ease-in-out;
+}
+div.footer{ 
+  height:200px;
 }

@@ -4,25 +4,21 @@ layout: default
 {% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
 {% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
 
+<h3>{{ page.name }}</h3>
 <div class="col-md-12">
-    <div id="map-container">
-      <div id="map"></div>
-   
+    <div id="map-container" class="detail">
+      <div id="map" class="detail"></div>   
+    <div class="project-detail-image" style="background-image:url('{{ page.image }}')"></div>
     </div>
-   
-</div>
 
-	<div class="col-md-8">
-		<div id="map-container">
-			<div id="map"></div>
-
-			<!-- <i class="map-top"></i> -->
-			<i class="map-left"></i>
-		</div>
-	</div>
 </div>
 
 
+<div class="project-detail">
+
+
+  <p>{{ page.content }}</p>
+</div>
 
 <script>
   var markerIconActive = L.AwesomeMarkers.icon({
