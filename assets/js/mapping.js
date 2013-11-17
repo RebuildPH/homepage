@@ -52,7 +52,7 @@ var jekyllMap = (function (jekyllMap) {
     map.attributionControl.setPrefix("");
 
     // mapping tiles
-    L.tileLayer('http://{s}.tiles.mapbox.com/v3/examples.map-vyofok3q/{z}/{x}/{y}.png', {maxZoom: 14}).addTo(map);
+    L.tileLayer('http://{s}.tiles.mapbox.com/v3/examples.map-vyofok3q/{z}/{x}/{y}.png', {maxZoom: 18}).addTo(map);
 
     // Leaflet marker points creation, each marker on a new layer
     // Takes in generated .geojson file and adds to map

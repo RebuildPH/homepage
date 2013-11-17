@@ -8,40 +8,44 @@ layout: default
 {% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
 
 <div class="row main-content">
-
+  
 
   <div class="col-md-12">
     <div id="map-container">
       <div id="map"></div>
     </div>
-<!--    <div class="row">
-      <div class="col-md-4 col-md-offset-1 side-list">
-        <div class="point-counter"><span class="count-highlight">{{total}}</span> Project</div>
-        <div class="list-group" id="listings">
-          <div class="list-group-container">
-        {% assign count = 0 %}{% for page in site.pages %}
-          {% if page.layout == 'location' %}
 
-            <button class="list-group-item" data-target="#{{count}}">{{ page.title }} <p class="address">{{page.address}}</p></button>
-            <div id="{{count}}" class="collapse">
-              <div class="details">
-                <a href="{{ page.url }}" class="pull-right"><strong>More Info ></strong></a>
-                <p><strong>Installed:</strong> {{ page.install_date }}</p>
-                <img src="{{relative}}images/{{ page.image }}" class="sidebar" />
-              </div>
-            </div>
+    <div class="project-details">
+      
+    </div>
 
-        {% assign count = count | plus: 1 %}
-        {% endif %}
-      {% endfor %}
-    </div> 
-      </div> 
+
+
+
+
+
+
+
+
+<!-- -->
 
   </div>
-</div> -->
-
 </div>
 
+
+<div class="project-list">
+  {% for page in site.pages %}
+  {% if page.layout == 'location' %}
+
+  <div class="col-md-3 project-list-item">
+
+    <h3>{{ page.name }}</h3>
+    <img src="{{ page.image }}" />
+    <p>{{ page.content }}</p>
+
+  </div>
+  {% endif %}
+  {% endfor %}
 
 </div>
 

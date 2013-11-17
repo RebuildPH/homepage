@@ -154,6 +154,34 @@ body {
   position: relative;
 }
 
+
+div.project-details{ 
+  width:0px;
+  position:absolute;
+  top:150px;
+  right:0px;
+  background:#fff;
+  overflow:hidden;
+}
+div.project-details.show{
+  width:300px;
+  -webkit-transition: all 1sec;
+} 
+
+div.project-list-item{ 
+  padding:20px;
+}
+div.project-list-item img{ 
+  width:100%;
+  
+  margin:10px auto 20px;
+}
+
+div.project-list{ 
+  width:900px;
+  margin:auto;
+}
+
 div.side-list {
 	position: relative;
 	z-index: 2;
