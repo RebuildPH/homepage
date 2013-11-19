@@ -7,47 +7,101 @@ layout: default
 {% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
 {% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
 
-<div class="row main-content">
-  
-
-  <div class="col-md-12">
-    <div id="map-container">
-      <div id="map"></div>
+<section id="main-content">
+  <section id="stage">
+    <div class="container">
+      <div class="twelve columns">
+        <div id="main-map" class="stage-map">
+          <div class="mapgroup-container">
+            <div id="mapgroup_121" class="mapgroup">
+              <ul class="map-nav">
+                <li><a href="" class="active">Roads</a></li>
+                <li><a href="">Buildings</a></li>
+                <li><a href="">Schools</a></li>
+                <li><a href="">Towers</a></li>
+                <li class="more-tab">
+                  <a href="" class="toggle-more">More...</a>
+                  <ul class="more-maps-list">
+                    <li class="more-item"><a href="">Other 1</a></li>
+                    <li class="more-item"><a href="">Other 2</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="content-map">
+            <div class="map-sidebar">
+              <div class="sidebar-inner">
+                <div class="story">
+                  <small>11/14/2013 - Submitted news</small>
+                  <h2>From paradise to inferno</h2>
+                  <div class="media-limit">
+                    <img class="thumbnail" src="images/project1.jpg" height="90" />
+                  </div>
+                  <a class="button open-slideshow" href="http://infoamazonia.org/#">View image gallery</a>
+                  <div class="story-content">
+                    <p>Spectacular and heartrending at the same time, the Amazon is the focus of great controversy that affects the world as much as it does Brazil. <a href="http://infoamazonia.org/wp-content/uploads/2013/11/Amazonia11_MG_4946-e1383948004986.jpg"></a></p>
+                    <p><a href="http://infoamazonia.org/wp-content/uploads/2013/11/Amazonia12_MG_5113-e1383950089361.jpg"></a></p>
+                  </div>
+                  <a href="http://blogs.reuters.com/photographers-blog/2013/11/11/from-paradise-to-inferno/" target="_blank" rel="external">Read</a>
+                </div>
+                <div class="sharing">
+                  <a class="button share-button" href="" target="_blank">Share this</a>
+                  <a class="button print-button" href="" target="_blank">Print</a>
+                  <div class="social">
+                    <div class="twitter-button"></div>
+                    <div class="fb-like"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="map-container">
+              <div class="row main-content">
+                <div class="col-md-12">
+                  <div id="map-container">
+                    <div id="map"></div>
+                  </div>
+                  <div class="project-details"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+</section>
 
-    <div class="project-details">
-      
-    </div>
-
-
-
-
-
-
-
-
-
-<!-- -->
-
+<section id="content">
+  <div class="container">
+    <section id="highlights" class="loop-section">
+      <div class="twelve columns">
+        <h3>Projects</h3>
+      </div>
+      <ul class="list-posts row">
+        {% for page in site.pages %}
+        {% if page.layout == 'location' %}
+        {% if page.name == 'Example Project' %}
+        <li class="post-item three columns active">
+        {% else %}
+        <li class="post-item three columns">
+        {% endif %}
+          <article>
+            <header class="post-header">
+              <p class="meta">{{ page.start }}</p>
+              <div class="media-limit">
+                <a href="{{ page.url }}" title="{{ page.name }}"><img src="{{ relative }}{{ page.image }}" alt="{{ page.name }}"></a>
+              </div>
+              <h2><a href="{{ page.url}}">{{ page.content }}</a></h2>
+            </header>
+          </article>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
   </div>
-</div>
+</section>
 
-
-<div class="project-list">
-  {% for page in site.pages %}
-  {% if page.layout == 'location' %}
-
-  <div class="col-md-3 project-list-item">
-
-    <a href="{{page.url}}"><h3>{{ page.name }}</h3></a>
-    <img src="{{ page.image }}" />
-    <p>{{ page.content }}</p>
-
-  </div>
-  {% endif %}
-  {% endfor %}
-
-</div>
-
-<script src="{{relative}}map.geojson"></script>
-<script src="{{relative}}assets/js/mapping.js"></script>
+<script src="{{ relative }}map.geojson"></script>
+<script src="{{ relative }}assets/js/mapping.js"></script>

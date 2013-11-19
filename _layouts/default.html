@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-  <title>SF Parklet Map</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="en-US">
+  <meta name="keywords" content="">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@RebuildPH">
+  <meta name="twitter:url" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+
+  <title>RebuildPH</title>
+
   {% include scripts.html %}
 </head>
 
-<body>
-
-{% include navbar.html %}
-
-
-{{ content }}
-
-
-
-<div class="footer"></div>
+<body class="home blog en-US displaying-map" data-twttr-rendered="true" style="">
+  {% include navbar.html %}
+  {{ content }}
+  {% include subfooter.html %}
+  {% include footer.html %}
 </body>
 </html>
